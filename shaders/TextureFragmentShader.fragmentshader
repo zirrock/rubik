@@ -1,0 +1,20 @@
+#version 330 core
+
+// Interpolated values from the vertex shaders
+in vec2 UV;
+
+// Ouput data
+out vec3 color;
+
+// Values that stay constant for the whole mesh.
+uniform sampler2D myTextureSampler;
+uniform float highlight;
+
+void main(){
+	vec3 LightColor = vec3(1,1,1);
+	float LightPower = 50.0f;
+	// Output color = color of the texture at the specified UV
+	vec3 baseColor = texture(myTextureSampler, UV).rgb;
+	vec3 highlightColor = baseColor + baseColor * LightColor * highlight;
+	color = highlightColor;
+}
