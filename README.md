@@ -12,5 +12,4 @@ Compilation on Linux:
 - cd build
 - cmake ..
 - make all
-- 
-did not have the ability to test the Linux compilation, might have some issues
+- run in the main directory

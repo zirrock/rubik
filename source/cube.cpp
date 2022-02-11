@@ -1,3 +1,5 @@
+#include <cstdio>
+
 #include "cube.hpp"
 #include <common/objloader.hpp>
 #include <glm/gtc/matrix_transform.hpp>
